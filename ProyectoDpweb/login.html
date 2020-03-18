@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script language="Javascript" type="text/javascript"> 
+ 
+	function Validate()
+	var form = document.form;
+	{
+		if(form.text.value==0)
+		{
+			alert("Digite el Nombre del Usuario");
+			form.Username.value="";
+			form.Username.focus();
+			return false;
+		}
+		if(IsEmptyField(form.password.value))
+		{
+			alert("Digite la Contraseña");
+			return false;
+		}
+					return true;
+			
+		}
+	</script>
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-login">
+	<header class="site-header">
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img class="logo" src="Img/logo.jpg" alt="Logo tipo de Cellshop">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="Img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<ul id="navegacion" class="navegacion">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="ingresarProductos.html">Ingresar Productos</a></li>
+					<li><a href="registrar_Clientes.html">Registrarse</a></li>
+					<li><a href="contactenos.html">Contacto</a></li>
+					<li><a href="encuesta.html">Encuesta</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="">Submenu</a>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="estructuras.html">Estructuras Web</a></li>
+							<li><a href="servidores.html">Servidores Web</a></li>
+							<li><a href="maquetacion.html">Maquetacion</a></li>
+							<li><a href="internet.html">IoT</a></li>
+							<li><a href="glosario.html">Glosario</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div> <!--Contenedor-->
+	</header>
+	<div>
+		<form class="box" action="index.html"  method="POST" onsubmit="return Validate();">
+			<form name="form"  method="POST" onsubmit="return Validate();">
+				<h1>Iniciar Sesión</h1>
+				<input type="text" name="Usuario" placeholder="Usuario" id="text" required>
+				<input type="password" name="contraseña" placeholder="Contraseña" id="password" required>
+				<input type="submit" name="" value="Entrar" >
+				<input type="reset" value="Borrar los datos">
+			</form>
+	</div>
+</div>
+<footer class="site-footer seccion">
+	<div class="contenedor contenedor-footer">
+		<ul class="navegacion">
+			<li><a href="index.html">Inicio</a></li>
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="grupo.html">Grupo</a></li>
+		</ul>
+		<p class="copyright">Todos los Derechos Reservados 2019 &copy; </p>
+	</div>
+</footer>
+</body>
+</html>

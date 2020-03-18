@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script>
+function validacion(){
+ if(!document.querySelector('input[name="r1"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 1');
+      return false;
+      }
+       if(!document.querySelector('input[name="r2"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 2');
+      return false;
+      }
+  var c1 = document.getElementById('r3-1').checked;
+ var c2 = document.getElementById('r3-2').checked;
+ var c3 = document.getElementById('r3-3').checked;
+ var c4 = document.getElementById('r3-4').checked;
+ if (c1==true || c2==true || c3==true || c4==true) {
+ 	  } else{
+alert ("Selecciona una o varias opciones de la pregunta 3");
+return false;
+ }
+ if(!document.querySelector('input[name="r7"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 7');
+      return false;
+      }
+ if(!document.querySelector('input[name="r9"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 9');
+      return false;
+      }
+ var d1 = document.getElementById('r10-1').checked;
+ var d2 = document.getElementById('r10-2').checked;
+ var d3 = document.getElementById('r10-3').checked;
+ var d4 = document.getElementById('r10-4').checked;
+ if (d1==true || d2==true || d3==true || d4==true) {
+ 	  } else{
+alert ("Selecciona una o varias opciones de la pregunta 10");
+return false;
+ }
+ if(!document.querySelector('input[name="r11"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 11');
+      return false;
+ }
+      if(!document.querySelector('input[name="r12"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 12');
+      return false;
+ }
+      if(!document.querySelector('input[name="r14"]:checked')) {
+      alert('Selecciona una respuesta para la pregunta 14');
+      return false;
+ }
+ var e1 = document.getElementById('r15-1').checked;
+ var e2 = document.getElementById('r15-2').checked;
+ var e3 = document.getElementById('r15-3').checked;
+ if (e1==true || e2==true || e3==true) {
+ 	alert ("Haz finalizado la encuesta, Gracias por participar"); 
+ 	  }  else{
+ 	 alert ("Selecciona una o varias opciones de la pregunta 15"); 
+ 	 return false; 	
+ 	 }
+
+ 	  	}
+ </script>
+<title>Encuesta</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-encuesta">
+	<header class="header-frm">
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img class="logo" src="Img/logo.jpg" alt="Logo tipo de Cellshop">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="Img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<ul id="navegacion" class="navegacion">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="ingresarProductos.html">Ingresar Productos</a></li>
+					<li><a href="registrar_Clientes.html">Registrarse</a></li>
+					<li><a href="contactenos.html">Contacto</a></li>
+					<li><a href="encuesta.html">Encuesta</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="">Submenu</a>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="estructuras.html">Estructuras Web</a></li>
+							<li><a href="servidores.html">Servidores Web</a></li>
+							<li><a href="maquetacion.html">Maquetacion</a></li>
+							<li><a href="internet.html">IoT</a></li>
+							<li><a href="glosario.html">Glosario</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div> <!--Contenedor-->
+	</header>
+	<!--Formulario satisfaccion -->
+	<div class="contenedor-encuesta">
+		<h1 class="h1-encuesta" >Satisfaccion del Visitante</h1>
+		<h2 class="h2-encuesta">Ayudenos a Mejorar</h2>
+		<h3 class="h3-encuesta">Por favor, dedique unos minutos a completar esta peque&ntildea encuesta. Sus respuestas seran tratadas de forma confidencial y serviran para mejorar la web.</h3>
+	</div>
+	<div class="formencuesta">	
+		<form class="frm-encuesta" name="frmencuesta" method="post" onsubmit="return validacion();">
+		<label for="p1">1- Cuantas veces ha visitado usted CELLSHOP en los ultimos 30 dias</label><br>
+		<input type="radio" name="r1" id="r1" value="r1">2-3<br>
+		<input type="radio" name="r1" id="r1" value="r1">4-5<br>
+		<input type="radio" name="r1" id="r1" value="r1">6 o mas veces<br>
+		<input type="radio" name="r1" id="r1" value="r1">Es la Primera vez que visito la pagina<br><br>
+
+		<label for="p2">2- Volvera a visitarnos en los pr&oacuteximos 30 dias</label><br>
+		<input type="radio" name="r2" id="r2" value="r2">Si<br>
+		<input type="radio" name="r2" id="r2" value="r2">No<br>
+		<input type="radio" name="r2" id="r2" value="r2">No estoy seguro<br><br>
+			
+		<label for="p3">3- Por que motivos ha visitado usted CELLSHOP</label><br>
+		<input type="checkbox" name="r3" id="r3-1" value="1">Comparar precios<br>
+		<input type="checkbox" name="r3" id="r3-2" value="2">Por curiosidad<br>
+		<input type="checkbox" name="r3" id="r3-3" value="3">Productos novedosos<br>
+		<input type="checkbox" name="r3" id="r3-4" value="4">Comprar Producto <br><br>
+
+		<label for="p4">4- Que es lo que mas le gusta de CELLSHOP</label><br>
+		<textarea name="r4" id="r4" rows="2" cols="44" required placeholder="Favor ingresa tu comentario"></textarea><br><br>
+		<label for="p5">5- Que es lo que menos le gusta de CELLSHOP</label><br>
+		<textarea name="r5" id="r5" rows="2" cols="44" required placeholder="Favor ingresa tu comentario"></textarea><br><br>
+		<label for="p6">6- Tiene usted algun comentario adicional o alguna sugerencia que nos ayude a mejorar nuestros servicios</label><br>
+		<textarea name="r6" id="r6" rows="2" cols="44" placeholder="Comentario Opcional"></textarea><br><br>
+
+		<label for="p7">7- Cuanto le gustaria pagar por un Telefono</label><br>
+		<input type="radio" name="r7" id="r7" value="r7">Menos de $50<br>
+		<input type="radio" name="r7" id="r7" value="r7">$50 - $100<br>
+		<input type="radio" name="r7" id="r7" value="r7">$101 - $200<br>
+		<input type="radio" name="r7" id="r7" value="r7">$201 - $300<br>
+		<input type="radio" name="r7" id="r7" value="r7">Mas de $300<br><br>
+
+		<label for="p8">8- Cuantas horas al dia utilizas los siguientes productos (0 - 24) </label><br>
+		<label for="p8-1">Smartphone&nbsp;&nbsp;&nbsp;</label>
+		<input type="number" name="r8-1"size="5" maxlength="2" min="0" max="24" required><br>
+		<label for="p8-2">Tablet&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</label>
+		<input type="number" name="r8-2"size="5" maxlength="2" min="0" max="24" required><br>
+		<label for="p8-3">Computadora</label>
+		<input type="number" name="r8-3"size="5" maxlength="2" min="0" max="24" required><br><br>
+
+		<label for="p9">9- Cual es la razon principal por la que decides/decidirias comprar un Smartphone</label><br>
+		<input type="radio" name="r9" id="r9" value="r9">Necesidad<br>
+		<input type="radio" name="r9" id="r9" value="r9">Oferta<br>
+		<input type="radio" name="r9" id="r9" value="r9">Moda<br>
+		<input type="radio" name="r9" id="r9" value="r9">Deseo<br><br>
+
+		<label for="p10">10- Cual es el uso que mas le das a tu Smartphone</label><br>
+		<input type="checkbox" name="r10" id="r10-1" value="1">Hacer y Recibir llamadas<br>
+		<input type="checkbox" name="r10" id="r10-2" value="2">Redes Sociales, email<br>
+		<input type="checkbox" name="r10" id="r10-3" value="3">Multimedia (musica,fotos,videos, etc<br>
+		<input type="checkbox" name="r10" id="r10-4" value="4">Juegos <br><br>
+
+		<label for="p11">11- El Smartphone que tienes en la actualidad es</label><br>
+		<input type="radio" name="r11" id="r11" value="r11">Gama Baja<br>
+		<input type="radio" name="r11" id="r11" value="r11">Gama Media<br>
+		<input type="radio" name="r11" id="r11" value="r11">Gama Alta<br><br>
+
+		<label for="p12">12- Que Marca de fabricante de celulares crees que es la mejor</label><br>
+		<input type="radio" name="r12" id="r12" value="r12">Samsung<br>
+		<input type="radio" name="r12" id="r12" value="r12">Motorola - LG<br>
+		<input type="radio" name="r12" id="r12" value="r12">Huawei<br><br>
+
+		<label for="p13">13- Como describirias nuestro Catalogo de Productos</label><br>
+		<textarea name="r13" id="r13" rows="2" cols="44" required placeholder="Favor ingresa tu comentario"></textarea><br><br>
+
+		<label for="p14">14- Es Usted...</label><br>
+		<input type="radio" name="r14" id="r14" value="r14">Hombre<br>
+		<input type="radio" name="r14" id="r14" value="r14">Mujer<br><br>
+
+		<label for="p15">15- Para cual o cuales dispositivos te gustaria comprar accesorios </label><br>
+		<input type="checkbox" name="r15" id="r15-1" value="1">Computadora<br>
+		<input type="checkbox" name="r15" id="r15-2" value="2">Smartphone<br>
+		<input type="checkbox" name="r15" id="r15-3" value="3">Tablet<br><br>
+
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpiar datos">
+		</form>
+	</div>
+
+<footer class="site-footer seccion">
+	<div class="contenedor contenedor-footer">
+		<ul class="navegacion">
+			<li><a href="index.html">Inicio</a></li>
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="grupo.html">Grupo</a></li>
+		</ul>
+		<p class="copyright">Todos los Derechos Reservados 2019 &copy; </p>
+	</div>
+</footer>
+</body>
+</html>

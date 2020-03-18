@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript">
+	function validacion(){
+ var d1 = document.getElementById('c1-1').checked;
+ var d2 = document.getElementById('c1-2').checked;
+ var d3 = document.getElementById('c1-3').checked;
+ var d4 = document.getElementById('c1-4').checked;
+ if (d1==true || d2==true || d3==true || d4==true) {
+ 	alert ("Gracias por contactarnos, en breve un Asesor se comunicara contigo"); 
+ 	  } else{
+alert ("Favor selecciona un motivo");
+return false;
+ }
+	
+	}
+</script>
+<title>formulario contactenos</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+
+<body class="body-contacto">
+	<header class="site-header">
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img class="logo" src="Img/logo.jpg" alt="Logo tipo de Cellshop">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="Img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<ul id="navegacion" class="navegacion">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="ingresarProductos.html">Ingresar Productos</a></li>
+					<li><a href="registrar_Clientes.html">Registrarse</a></li>
+					<li><a href="contactenos.html">Contacto</a></li>
+					<li><a href="encuesta.html">Encuesta</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="">Submenu</a>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="estructuras.html">Estructuras Web</a></li>
+							<li><a href="servidores.html">Servidores Web</a></li>
+							<li><a href="maquetacion.html">Maquetacion</a></li>
+							<li><a href="internet.html">IoT</a></li>
+							<li><a href="glosario.html">Glosario</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div> <!--Contenedor-->
+	</header>
+	<!--para registro de usario es necesario los siguientes campos-->
+	<div class="contenedor-contacto">
+		
+		<form class="form" name="frmcontact" method="post" onsubmit="return validacion();">
+			<div class="frm-header">
+				<h1 class="frm-titulo">C<span>ontacto</span></h1>
+			</div>
+		<label class="frm-label" for="nombre">Nombres</label>
+		<input class="frm-input" type="text"  name="nombre" id="nombre" placeholder="Escriba su nombre" required>
+
+		<label class="frm-label" for="apellidos">Apellidos</label>
+		<input class="frm-input" type="text" id="apellidos" placeholder="Escriba sus apellidos" required>
+
+		<label class="frm-label" for="Email">Email</label>
+		<input class="frm-input" type="email" name="correo" id="correo" required>
+
+		<label class="frm-label" for="cont1">Porque motivo deseas contactarnos</label>
+		<ul class="check"><input class="frm-input" type="checkbox" name="c1" id="c1-1" value="1">Informacion de Productos</ul>
+		<ul class="check"><input class="frm-input" type="checkbox" name="c1" id="c1-2" value="2">Comprar al Mayoreo</ul>
+		<ul class="check"><input class="frm-input" type="checkbox" name="c1" id="c1-3" value="3">Reclamos</ul>
+		<ul class="check"><input class="frm-input" type="checkbox" name="c1" id="c1-4" value="4">Otros</ul>
+	
+		<label class="frm-label" for="Mensaje">Mensaje</label>
+		<textarea class="text-area" name="r5" id="r5" required placeholder="Favor ingresa tu mensaje"></textarea>
+
+		<input class="frm-boton" type="submit" value="Enviar Datos">
+		<input class="frm-boton" type="reset" value="Limpiar Datos">
+		
+	</form>	
+	</div>
+<footer class="site-footer seccion">
+	<div class="contenedor contenedor-footer">
+		<ul class="navegacion">
+			<li><a href="index.html">Inicio</a></li>
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="grupo.html">Grupo</a></li>
+		</ul>
+		<p class="copyright">Todos los Derechos Reservados 2019 &copy; </p>
+	</div>
+</footer>
+</body>
+</html>

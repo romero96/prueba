@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Ingresar Productos</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-ingresar">
+	<header class="site-header">
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img class="logo" src="Img/logo.jpg" alt="Logo tipo de Cellshop">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="Img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<ul id="navegacion" class="navegacion">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="ingresarProductos.html">Ingresar Productos</a></li>
+					<li><a href="registrar_Clientes.html">Registrarse</a></li>
+					<li><a href="contactenos.html">Contacto</a></li>
+					<li><a href="encuesta.html">Encuesta</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="">Submenu</a>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="estructuras.html">Estructuras Web</a></li>
+							<li><a href="servidores.html">Servidores Web</a></li>
+							<li><a href="maquetacion.html">Maquetacion</a></li>
+							<li><a href="internet.html">IoT</a></li>
+							<li><a href="glosario.html">Glosario</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div> <!--Contenedor-->
+	</header>
+		<div class="contenedor-ingreso">
+		<h2>Formulario de Ingreso de producto</h2>
+
+	    <form class="frm-ingreso" name="frm2" action="" method="POST">
+		Nombre del producto: <input type="text" required>
+                 <br>
+		 <br>
+               Codigo: <input type="number" name="r8-2"size="5" maxlength="2" min="0" max="20000" required><br>
+		 <br>
+                Existencia: <input type="number" name="r8-2"size="5" maxlength="2" min="0" max="20000" required><br>
+                <br>
+               Cantidad: <input type="number" name="r8-2"size="5" maxlength="2" min="0" max="20000" required><br>
+		 <br>
+		Fecha de ingreso: <input type="date" name="fecha" required>
+               <br>
+                <br>
+                <tr height="50">
+		<td>Descripcion del producto </td>
+		<td>
+             <textarea name="r4" id="r4" rows="2" cols="44" required placeholder="Favor ingresa descripcion del producto"></textarea><br><br>
+              </td>
+              </tr>
+        
+		<br>
+                <br>
+      	
+	
+		<input class="btn-ingreso" type="submit" value="Agregar producto">
+                
+		<input class="btn-ingreso" type="reset" value="Eliminar">
+	</form>
+</div>
+<footer class="site-footer seccion">
+	<div class="contenedor contenedor-footer">
+		<ul class="navegacion">
+			<li><a href="index.html">Inicio</a></li>
+				<li><a href="historia.html">Historia</a></li>
+				<li><a href="grupo.html">Grupo</a></li>
+		</ul>
+		<p class="copyright">Todos los Derechos Reservados 2019 &copy; </p>
+	</div>
+</footer>
+</body>
+</html>

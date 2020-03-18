@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>formulario de clientes</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-registro">
+	<header class="site-header">
+		<div class="contenedor contenido-header">
+			<div class="barra">
+				<a href="/">
+					<img class="logo" src="Img/logo.jpg" alt="Logo tipo de Cellshop">
+				</a>
+				<div class="mobile-menu">
+					<a href="#navegacion">
+						<img src="Img/barras.svg" alt="Icono menu">
+					</a>
+				</div>
+				<ul id="navegacion" class="navegacion">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="ingresarProductos.html">Ingresar Productos</a></li>
+					<li><a href="registrar_Clientes.html">Registrarse</a></li>
+					<li><a href="contactenos.html">Contacto</a></li>
+					<li><a href="encuesta.html">Encuesta</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="">Submenu</a>
+						<ul>
+							<li><a href="historia.html">Historia</a></li>
+							<li><a href="estructuras.html">Estructuras Web</a></li>
+							<li><a href="servidores.html">Servidores Web</a></li>
+							<li><a href="maquetacion.html">Maquetacion</a></li>
+							<li><a href="internet.html">IoT</a></li>
+							<li><a href="glosario.html">Glosario</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div> <!--Contenedor-->
+	</header>
+	<div class="contenedor-contacto">
+		<form class="form" name="frmdatos" action="gracias.html" method="post" id="frmdatos" onsubmit="return Validate();">
+			<div class="frm-header">
+				<h1 class="frm-titulo">R<span>egistro</span></h1>
+			</div>
+		<label class="frm-label">Nombre</label>
+		<input class="frm-input" name="nombre" type="Text"  id="nombre">
+		<label class="frm-label">Apellidos</span></label>
+		<input class="frm-input" type="text" name="apellidos"  id="apellidos">
+		<label class="frm-label">Fecha nacimiento </label>
+		<input class="frm-input" name="f_n" type="text" onblur="CalculateAge();">
+		<span class="frm-label" lang="en-us">(dd/mm/yyyy), Edad: <span id="age"></span></span></td>
+		<label class="frm-label">Direccion</label>
+		<input class="frm-input" type="text" name="domicilio" id="domicilio">
+		<label class="frm-label">Correo:</label>
+		<input class="frm-input" type="text"  id="email">
+		<label class="frm-label">Ciudad</label>
+		<select name="ciudad">
+		<ul><option value="1">San Salvador</option></ul>
+		<ul><option value="2">Soyapango</option></ul>
+		<ul><option value="3">Apopa</option><ul>
+		</ul><option value="4">Otra</option></ul>
+		</select>
+		&nbsp; &nbsp;
+		<label class="frm-label">Teléfono</label> 
+		<input class="frm-input" type="text" name="telefono" size="9" maxlength="9" id="telefono">&nbsp;
+		(8888-8888)
+	
+		<label class="frm-label">Genero</label>
+	
+		<label >Hombre</lable> 
+		<input class="frm-input" type="radio" name="sexo" value="H" id="sexo">
+		<label>Mujer</label>
+		<input class="frm-input" type="radio" name="sexo" value="M" id="sexo">
+		<label class="frm-label">Estado Civil:</label>
+		<select class="" name="estado_civil">
+		<option value="1">Soltero</option>
+		<option value="2">Casado</option>
+		<option value="3">Divorciado</option>
+		<option value="4">Otro</option>
+		</select>
+		<label class="frm-label">Idiomas</label>
+		<ul><input type="checkbox" name="idiomas" value="E" id="idiomas[]"> Español</ul>
+		<ul><input type="checkbox" name="idiomas" value="F" id="idiomas[]"> Francés</ul>
+		<ul><input type="checkbox" name="idiomas" value="I" id="idiomas[]"> Inglés</ul>
+		<ul><input type="checkbox" name="idiomas" value="A" id="idiomas[]"> Alemán</ul>
+		<input class="frm-boton" type="submit" value="Validar los datos"> &nbsp;
+		<input class="frm-boton" type="reset" value="Borrar los datos">
+		<p class="log"> <a class="alogin" aling href="login.html">¿Ya tengo cuenta?</a></p>
+		</form>
+	</div>
+	<footer class="site-footer seccion">
+		<div class="contenedor contenedor-footer">
+			<ul class="navegacion">
+				<li><a href="index.html">Inicio</a></li>
+					<li><a href="historia.html">Historia</a></li>
+					<li><a href="grupo.html">Grupo</a></li>
+			</ul>
+			<p class="copyright">Todos los Derechos Reservados 2019 &copy; </p>
+		</div>
+	</footer>
+</body>
+</html>
+
+<script language="javascript" type="text/javascript"> 
+ 
+function Validate()
+{
+	if(IsEmptyField(frmdatos.nombre.value))
+	{
+		alert("Digite el nombre");
+		return false;
+	}
+	if(IsEmptyField(frmdatos.apellidos.value))
+	{
+		alert("Digite el apellido");
+		return false;
+	}
+	
+	var tmp = new String(frmdatos.f_n.value);
+	if(IsEmptyField(tmp))
+	{
+		alert("Digite su fecha de nacimiento");
+		return false;
+	}
+	//validate bday is a valid date
+	if(! validarFecha(tmp))
+	{
+		alert("la fecha de nacimiento no es valida");
+		return false;
+	}
+	if(IsEmptyField(frmdatos.domicilio.value))
+	{
+		alert("Digite el domicilio");
+		return false;
+	}
+	tmp = frmdatos.email.value;
+	if(IsEmptyField(tmp))
+	{
+		alert("Digite el email");
+		return false;
+	}
+	//basic test for an email. Verify that has at least a "." and a "@"
+	if(tmp.indexOf(".") < 0 || tmp.indexOf("@") < 0)
+	{
+		alert("Digite una direccion de email correcta");
+		return false;
+	}
+	
+	if(IsEmptyField(frmdatos.telefono.value))
+	{
+		alert("Digite el telefono");
+		return false;
+	}
+	//validate the format of the phone
+	tmp = frmdatos.telefono.value;
+	if(tmp.length != 9 || tmp.charAt(4) != "-")
+	{
+		alert("Digite el telefono en el formato indicado");
+		return false;
+	}
+	//validate the two parts of the phone are numeric
+	if(isNaN(tmp.substring(0, 3)) || isNaN(tmp.substring(5, 8)))
+	{
+		alert("El telefono es numerico");
+		return false;
+	}
+	if(! ValidateOneCheck(frmdatos.sexo) )
+	{
+		alert("El genero debe especificarse");
+		return false;
+	}
+	if(! ValidateOneCheck(frmdatos.idiomas) )
+	{
+		alert("debe checkear al menos un idioma");
+		return false;
+	}
+	
+	if(IsEmptyField(frmdatos.comentario.value))
+	{
+		alert("Digite el comentario");
+		return false;
+	}
+	
+ 
+ 
+	return true;
+}
+ 
+function CalculateAge()
+{
+	var bday = new String(frmdatos.f_n.value);
+	if(! validarFecha(bday))
+	{
+		alert("La fecha digitada no es valida");
+		age.innerText = "";
+		return;
+	}
+	var today = new Date();
+	var fechaArr = bday.split('/'); //parte la fecha basada en el caracter '/'
+ 	var aho = fechaArr[2];
+ 	var mes = fechaArr[1];
+ 	var dia = fechaArr[0];
+	var birthDate = new Date(aho, mes - 1, dia);//mes empieza de cero Enero = 0, le restamos uno si digita 12 queda en 11
+    var a = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+    {
+        a--;
+    }
+	age.innerHTML= a;
+}
+ 
+ 
+function IsEmptyField(theValue)
+{
+	return (theValue == null || theValue == "");
+}
+ 
+function ValidateOneCheck(theSelector)
+{
+	var chkd = false;
+	for(inty = 0; inty < theSelector.length; inty++)
+	{
+		if(theSelector[inty].checked)
+		{
+			chkd = true;
+			break;
+		}
+	}
+	return chkd;
+}
+
+function validarFecha(fecha)
+{
+ //valida fecha en formato dd/mm/aaaa
+ var fechaArr = fecha.split('/');  //parte la fecha basada en el caracter '/'
+ var aho = fechaArr[2];
+ var mes = fechaArr[1];
+ var dia = fechaArr[0];
+ 
+ var plantilla = new Date(aho, mes - 1, dia);//mes empieza de cero Enero = 0, le restamos uno si digita 12 queda en 11
+
+ if(!plantilla || plantilla.getFullYear() == aho && plantilla.getMonth() == mes -1 && plantilla.getDate() == dia)
+ {
+ 	return true;
+ }
+ else
+ {
+ 	return false;
+ }
+}
+ 
+</script>
+
